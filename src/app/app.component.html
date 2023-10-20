@@ -1,3 +1,56 @@
-<main>
-  <h1>Currency Convertor</h1>
+<app-header></app-header>
+<main class="w-full p-[25px]">
+  <div
+    class="lg:w-1/2 w-full mx-auto border border-fuchsia-200 rounded shadow-custom bg-fuchsia-200 relative"
+  >
+    <div
+      class="flex flex-col mx-auto lg:w-1/2 gap-y-[25px] items-center py-[25px]"
+    >
+      <h1 class="font-bold text-2xl">Currency Convertor</h1>
+      <form class="w-full">
+        <div
+          class="flex flex-col lg:flex-row justify-center font-medium text-base gap-x-[25px]"
+        >
+          <app-amount-input
+            (valueChanged)="handleFirstAmountChange($event)"
+            [amount]="firstAmount"
+            [currencies]="_currencies"
+            [currency] = "fromCurrency"
+          ></app-amount-input>
+          <app-currency-selector
+            [name]="'From'"
+            [currencies]="_currencies"
+            (currencySelected)="handleFromCurrencySelected($event)"
+            *ngIf="_currencies.length > 0"
+          ></app-currency-selector>
+        </div>
+      </form>
+      <form class="w-full">
+        <div
+          class="flex flex-col lg:flex-row justify-center font-medium text-base gap-x-[25px]"
+        >
+          <app-amount-input
+            (valueChanged)="handleSecondAmountChange($event)"
+            [amount]="secondAmount"
+            [currencies]="_currencies"
+            [currency] = "toCurrency"
+          ></app-amount-input>
+          <app-currency-selector
+            [name]="'To'"
+            [currencies]="_currencies"
+            (currencySelected)="handleToCurrencySelected($event)"
+            *ngIf="_currencies.length > 0"
+          ></app-currency-selector>
+        </div>
+      </form>
+    </div>
+    <h1 class="absolute -bottom-7 right-0 font-bold text-white">
+      Made by
+      <a
+        href="https://github.com/perfectAcedia"
+        class="underline underline-offset-1"
+        >perfectAcedia</a
+      >
+    </h1>
+  </div>
 </main>

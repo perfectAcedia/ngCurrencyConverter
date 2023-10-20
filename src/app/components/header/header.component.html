@@ -1,0 +1,22 @@
+<header
+  class="w-full flex items-center justify-end lg:justify-center min-h-[75px] lg:min-h-[100px] border-b border-white relative"
+>
+  <div
+    class="w-[110px] lg:w-[130px] font-bold text-2xl lg:text-3xl absolute lg:top-3 top-1 left-5"
+  >
+    <h1 class="text-white">Currency Rate</h1>
+  </div>
+
+  <div class="flex gap-[20px]">
+    <div class="flex flex-col items-center font-medium">
+      <span class="h-[30px] w-[30px]"> <img src="../../../assets/icons/Flag_of_Europe.svg.webp" alt="eu" /> </span>
+      <span><i>BUY:</i> {{ euRateBuy }} UAH</span>
+      <span><i>SELL:</i> {{ euRateSell }} UAH</span>
+    </div>
+    <div class="flex flex-col items-center font-medium">
+      <span class="h-[30px] w-[30px]"> <img src="../../../assets/icons/320px-Flag_of_the_United_States.png" alt="usd" /> </span>
+      <span><i>BUY:</i> {{ usdRateBuy }} UAH</span>
+      <span><i>SELL:</i> {{ usdRateSell }} UAH</span>
+    </div>
+  </div>
+</header>

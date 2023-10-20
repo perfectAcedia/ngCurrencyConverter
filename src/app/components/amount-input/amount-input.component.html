@@ -1,0 +1,16 @@
+<div class="flex flex-col items-center gap-y-[20px] w-3/4 lg:w-full mx-auto">
+  <label
+    for="input-group-1"
+    class="block mb-2 text-lg font-medium text-gray-900"
+    >Amount</label
+  >
+  <input
+    type="text"
+    id="input-group-1"
+    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+    placeholder="Enter your amount"
+    [(ngModel)]="amount"
+    (input)="onInputChange()"
+    required
+  />
+</div>
