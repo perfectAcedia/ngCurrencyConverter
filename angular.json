@@ -86,10 +86,13 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/ngCurrencyConvertor/"
+            "baseHref": "/ngCurrencyConverter/"
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
